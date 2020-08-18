@@ -1,5 +1,4 @@
 import numpy as np
-import mnist_loader
 
 class Network:
     def __init__(self, layers):
