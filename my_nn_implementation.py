@@ -86,28 +86,3 @@ class Network:
 
     def sigmoid_prime(self, z):
         return self.sigmoid(z) * (1 - self.sigmoid(z))
-
-
-# training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
-# net = Network([784, 30, 10])
-# instances = [x[0] for x in training_data]
-# instances_test = [x[0] for x in test_data]
-# training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
-# labels = [x[1] for x in training_data]
-# labels_test = [x[1] for x in test_data]
-#
-# instances_numpy = np.zeros([len(instances[0]), len(instances)])
-# labels_numpy = np.zeros([len(labels[0]), len(labels)])
-#
-# instances_numpy_test = np.zeros([len(instances[0]), len(instances_test)])
-# labels_numpy_test = labels_test
-#
-# for i in range(len(instances)):
-#     instances_numpy[:, i] = np.squeeze(np.array(instances[i]))
-# for i in range(len(labels)):
-#     labels_numpy[:, i] = np.squeeze(np.array(labels[i]))
-#
-# for i in range(len(instances_test)):
-#     instances_numpy_test[:, i] = np.squeeze(np.array(instances_test[i]))
-#
-# net.SGD(instances_numpy, labels_numpy, 30, 3.0, 10, instances_numpy_test, labels_numpy_test)
